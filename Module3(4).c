@@ -217,7 +217,160 @@ int main()
 /*6. WAP to make addition, Subtraction and multiplication of two matrix using
 2-D Array*/
 
-//doubt
+#include <stdio.h>
+
+void sortArray(int arr[], int n, int ascending) 
+{
+    int i, j, temp;
+    for (i = 0; i < n-1; i++) 
+    {
+        for (j = i + 1; j < n; j++) 
+        {
+            if (ascending ? arr[i] > arr[j] : arr[i] < arr[j]) 
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+}
+
+int main() 
+{
+    int arr1[100], arr2[100], n, i, choice;
+    printf("Enter the size of array: ");
+    scanf("%d", &n);
+    
+    printf("Enter the elements of first array: ");
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr1[i]);
+    }
+    
+    printf("Enter the elements of second array: ");
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr2[i]);
+    }
+    
+    printf("Enter 1 for ascending order and 0 for descending order: ");
+    scanf("%d", &choice);
+    
+    sortArray(arr1, n, choice);
+    sortArray(arr2, n, choice);
+    
+    printf("Sorted first array: ");
+    for (i = 0; i < n; i++) 
+    {
+        printf("%d ", arr1[i]);
+    }
+    printf("\n");
+    
+    printf("Sorted second array: ");
+    for (i = 0; i < n; i++) 
+    {
+        printf("%d ", arr2[i]);
+    }
+    printf("\n");
+    
+    return 0;
+}
+
+/*6. WAP to make addition, Subtraction and multiplication of two matrix using
+2-D Array*/
+
+#include<stdio.h>
+int main()
+{
+    int a[3][3];
+     int r,c;
+    for(r=0;r<3;r++)
+    {
+        for(c=0;c<3;c++)
+        {
+            printf("Input Elements of Array[%d][%d]: ",r,c);
+            scanf("%d",&a[r][c]);
+        }
+    }
+    printf("\n-------------------------------------\n");
+    for(r=0;r<3;r++)
+    {
+        for(c=0;c<3;c++)
+        {
+            printf("%d",a[r][c]);
+            
+        }
+        printf("\n");
+    }
+
+    for(r=0;r<3;r++)
+    {
+        for(c=0;c<3;c++)
+        {
+            printf("Input Elements of Array[%d][%d]: ",r,c);
+            scanf("%d",&a[r][c]);
+        }
+    }
+    printf("\n------------------------------------------\n");
+    for(r=0;r<3;r++)
+    {
+        for(c=0;c<3;c++)
+        {
+            printf("%d",a[r][c]);
+            
+        }
+        printf("\n");
+    }
+    for(r=0;r<3;r++)
+    {
+        for(c=0;c<3;c++)
+        {
+            printf("%d",a[r][c]+a[r][c]);
+            
+        }
+        printf("\n");
+    }
+    printf("\n-----------------------------------\n");
+    for(r=0;r<3;r++)
+    {
+        for(c=0;c<3;c++)
+        {
+            printf("%d",a[r][c]);
+            
+        }
+        printf("\n");
+    }
+    for(r=0;r<3;r++)
+    {
+        for(c=0;c<3;c++)
+        {
+            printf("%d",a[r][c]-a[r][c]);
+            
+        }
+        printf("\n");
+    }
+    printf("\n--------------------------------------\n");
+    for(r=0;r<3;r++)
+    {
+        for(c=0;c<3;c++)
+        {
+            printf("%d",a[r][c]);
+            
+        }
+        printf("\n");
+    }
+     printf("\n------------------------------------------\n");
+    for(r=0;r<3;r++)
+    {
+        for(c=0;c<3;c++)
+        {
+            printf("%d",a[r][c]*a[r][c]);
+            
+        }
+        printf("\n");
+    }
+}
 
 /*7. WAP Find out length of string without using inbuilt function*/
 
@@ -252,7 +405,34 @@ int main()
 Write a program of structure employee that provides the following
 a. information -print and display empno, empname, address
 and age*/
-/*doubt*/
+
+#include<stdio.h>
+int main()
+{
+	int i,emp_no,emp_age,emp[5];           
+	char emp_name[25], emp_add[20];
+	
+	  for(i=0;i<5;i++)
+	
+     {
+          printf("Enter Employee Name : \n");
+          scanf("%s",&emp_name);
+          
+          printf("Enter Employe ID No : \n");
+          scanf("%d",&emp_no);
+          
+          printf("Enter Employee Age : \n");
+          scanf("%d",&emp_age);
+
+          printf("Enter Employee Add : \n");
+          scanf("%s",&emp_add);
+        
+          printf("Name : %s\n",emp_name);
+          printf("ID : %d\n",emp_no);
+          printf("Age : %d\n",emp_age);
+          printf("Address : %s\n",emp_add);
+     }
+}
 
 
 /*WAP to show difference between Structure and Union.*/
