@@ -459,7 +459,7 @@ int main()
     struct Structt st;
     st.intVal = 42;
     st.floatVal = 3.14;
-    strcpy(st.str, "Hello");  // Corrected the variable name from 's' to 'st'
+    strcpy(st.str, "Hello");  
 
     printf("Structure values:\n");
     printf("intVal: %d\n", st.intVal);
@@ -751,4 +751,3 @@ int main()
     printf("Size of union: %lu bytes\n", sizeof(u));
     return 0;
 }
-
