@@ -701,4 +701,18 @@ int main()
 }
 
 /*28. 1 2 3 6 9 18 27 54*/
-//Doubt
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int num = 1;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", num);
+        num = num * 3;
+    }
+    return 0;
+}
